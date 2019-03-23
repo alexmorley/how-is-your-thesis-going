@@ -1,0 +1,67 @@
+.Chapter-1 {
+    color: cornflowerblue;
+    stroke: cornflowerblue;
+}
+
+.Chapter-2 {
+    color: red;
+    stroke: red;
+}
+
+.Chapter-3 {
+    color: blue;
+    stroke: blue;
+}
+
+.Chapter-4 {
+    color: green;
+    stroke: green;
+}
+
+.Chapter-5 {
+    color: yellow;
+    stroke: yellow;
+}
+
+.Chapter-6 {
+    color: brown;
+    stroke: brown;
+}
+
+.Chapter-7 {
+    color: purple;
+    stroke: purple;
+}
+
+.Number-Figures {
+    color: black;
+    stroke: black;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 12px sans-serif;
+}
+td {
+    border: 1px black solid;
+    padding: 5px;
+}
+.line {
+    fill: none;
+    stroke-width: 1px;
+}
+
+.axis path {
+    stroke: black;
+    stroke-width: 1px;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.tick line {
+    stroke: black;
+    stroke-width: 1px;
+}
