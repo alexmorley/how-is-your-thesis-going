@@ -26,6 +26,7 @@ url="$2"
 if [ -f $HOME/git_repos/how-is-your-thesis-going/update_word_count.sh ]; then
     echo "Updating Word Count"
     cd $HOME/git_repos/how-is-your-thesis-going/
+    git pull
     bash update_word_count.sh
     git add data_raw.csv data.csv
     echo "Pushing to site"
