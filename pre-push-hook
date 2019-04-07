@@ -28,7 +28,7 @@ if [ -f $HOME/git_repos/how-is-your-thesis-going/update_word_count.sh ]; then
     cd $HOME/git_repos/how-is-your-thesis-going/
     git pull
     bash update_word_count.sh
-    git add data_raw.csv data.csv
+    git add data.csv
     echo "Pushing to site"
     git commit -m "update word count"
     git push
