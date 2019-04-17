@@ -28,10 +28,10 @@ var svg = d3.select("body").append("svg")
 // set the line attributes
 var line = d3.svg.line()
 //.interpolate("basis")
-.x(function(d) { return 100*d.index })
+.x(function(d) { return 25*d.index })
 	.y(function(d) { 
     if(d.parent_.id == 'Number-Figures') { 
-      return height+(-10*d.value)
+      return height+(-3*d.value)
     } else {  
       return height+(-0.025*d.value)
     }
