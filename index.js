@@ -17,7 +17,7 @@ d3.text("data.csv", function(data) {
 // basic SVG setup
 var margin = { top: 20, right: 100, bottom: 40, left: 100 };
 var height = 300 - margin.top - margin.bottom;
-var width = 600 - margin.left - margin.right;
+var width = 1000 - margin.left - margin.right;
 //
 var svg = d3.select("body").append("svg")
 .attr("width",width + margin.left + margin.right)
@@ -28,7 +28,7 @@ var svg = d3.select("body").append("svg")
 // set the line attributes
 var line = d3.svg.line()
 //.interpolate("basis")
-.x(function(d) { return 25*d.index })
+.x(function(d) { return 20*(d.index-1) })
 	.y(function(d) { 
     if(d.parent_.id == 'Number-Figures') { 
       return height+(-3*d.value)
