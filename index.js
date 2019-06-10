@@ -28,7 +28,15 @@ var svg = d3.select("body").append("svg")
 // set the line attributes
 var line = d3.svg.line()
 //.interpolate("basis")
-.x(function(d) { return 20*(d.index-2) })
+.x(function(d) {
+  let zero_date = new Date(..."2019-03-16-00-00".split("-"))
+  let date = d.date;
+  var microSecondsDiff = date.getTime() - zero_date.getTime();
+  var hoursDiff = Math.floor(microSecondsDiff/(1000 * 60 * 60 ));
+  console.log(hoursDiff,"   ", d.index*20);
+
+  return hoursDiff/3.5
+})
 	.y(function(d) { 
     if(d.parent_.id == 'Number-Figures') { 
       return height+(-3*d.value)
@@ -52,7 +60,7 @@ var line = d3.svg.line()
 				return {
           id_index: i,
 					index: d_i,
-					date: d_el["date"],
+					date: new Date(...d_el["Date"].split("-")),
 					value: d_el[el],
           parent_: parent_
 				}
