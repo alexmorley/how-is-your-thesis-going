@@ -29,7 +29,7 @@ var svg = d3.select("body").append("svg")
 var line = d3.svg.line()
 //.interpolate("basis")
 .x(function(d) {
-  let zero_date = new Date(..."2019-03-16-00-00".split("-"))
+  let zero_date = new Date(..."2019-03-26-00-00".split("-"))
   let date = d.date;
   var microSecondsDiff = date.getTime() - zero_date.getTime();
   var hoursDiff = Math.floor(microSecondsDiff/(1000 * 60 * 60 ));
